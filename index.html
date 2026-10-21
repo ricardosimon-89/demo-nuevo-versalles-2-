@@ -27,10 +27,10 @@
                     },
                     colors: {
                         medical: {
-                            dark: '#0B192C',     // Azul marino clínico profundo (Autoridad/Premium)
-                            primary: '#0284C7',  // Azul médico corporativo
-                            teal: '#0D9488',     // Turquesa salud
-                            light: '#F0F9FF',    // Fondo clínico suave
+                            dark: '#0B192C',
+                            primary: '#0284C7',
+                            teal: '#0D9488',
+                            light: '#F0F9FF',
                             surface: '#F8FAFC'
                         }
                     }
@@ -74,7 +74,6 @@
     <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Identidad Corporativa -->
                 <a href="#" class="flex items-center space-x-3">
                     <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-medical-primary to-medical-teal flex items-center justify-center text-white text-xl shadow-md">
                         <i class="fa-solid fa-staff-snake"></i>
@@ -85,7 +84,6 @@
                     </div>
                 </a>
 
-                <!-- Menú Desktop -->
                 <div class="hidden md:flex items-center space-x-8 font-semibold text-sm text-slate-600">
                     <a href="#especialidades" class="hover:text-medical-primary transition">Unidades Médicas</a>
                     <a href="#gestion-citas" class="hover:text-medical-primary transition">Sistema Rápido de Citas</a>
@@ -93,7 +91,6 @@
                     <a href="#ubicacion" class="hover:text-medical-primary transition">Ubicación y Contacto</a>
                 </div>
 
-                <!-- Botones de Acción Directa -->
                 <div class="flex items-center space-x-3">
                     <a href="tel:910392903" class="hidden lg:flex items-center text-slate-700 hover:text-medical-primary font-bold text-sm px-3 py-2 rounded-lg transition">
                         <i class="fa-solid fa-phone-volume text-medical-primary mr-2"></i> 910 39 29 03
@@ -107,7 +104,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION: Enfocada en Prestigio + Organización de Agenda -->
+    <!-- HERO SECTION -->
     <header class="hero-clinical text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 relative">
         <div class="max-w-7xl mx-auto">
             <div class="lg:w-3/5">
@@ -135,7 +132,6 @@
                     </a>
                 </div>
 
-                <!-- Indicadores de Autoridad -->
                 <div class="mt-12 pt-8 border-t border-slate-700/70 grid grid-cols-3 gap-4 sm:gap-8">
                     <div>
                         <p class="font-heading text-2xl sm:text-3xl font-extrabold text-white">4,6 <span class="text-amber-400 text-xl">★</span></p>
@@ -154,7 +150,7 @@
         </div>
     </header>
 
-    <!-- AVISO DE GESTIÓN INTELIGENTE DE AGENDA (Guiño directo a lo que dijo en la llamada) -->
+    <!-- AVISO DE GESTIÓN INTELIGENTE DE AGENDA -->
     <section class="bg-white border-b border-slate-200 py-6 px-4">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 bg-medical-light border border-sky-100 rounded-2xl p-5">
             <div class="flex items-start sm:items-center space-x-4">
@@ -172,7 +168,7 @@
         </div>
     </section>
 
-    <!-- ESPECIALIDADES MÉDICAS (Las 4 reales del Centro Médico Loranca) -->
+    <!-- ESPECIALIDADES MÉDICAS -->
     <section id="especialidades" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-medical-primary font-bold text-xs uppercase tracking-widest">Atención Multidisciplinar en Nuevo Versalles</span>
@@ -295,7 +291,7 @@
         </div>
     </section>
 
-    <!-- SISTEMA DE TRIAJE Y FILTRO DE CITAS A WHATSAPP (La joya de la corona para su problema de saturación) -->
+    <!-- SISTEMA DE TRIAJE Y FILTRO DE CITAS A WHATSAPP (Actualizado al 679 33 10 98) -->
     <section id="gestion-citas" class="py-20 px-4 sm:px-6 lg:px-8 bg-medical-dark text-white relative">
         <div class="max-w-5xl mx-auto">
             <div class="bg-white text-slate-800 rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-12">
@@ -318,7 +314,7 @@
                                 <i class="fa-brands fa-whatsapp text-2xl text-emerald-400"></i>
                                 <div>
                                     <p class="text-xs text-sky-200 uppercase font-bold">WhatsApp de Citas</p>
-                                    <p class="font-bold text-base">608 75 97 15</p>
+                                    <p class="font-bold text-base">679 33 10 98</p>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-3 bg-white/10 p-3.5 rounded-xl">
@@ -337,7 +333,7 @@
                     </div>
                 </div>
 
-                <!-- Formulario Pre-Filtro (Envía el mensaje estructurado al 608759715) -->
+                <!-- Formulario Pre-Filtro (Envía el mensaje estructurado al 679331098) -->
                 <div class="lg:col-span-7 p-8 sm:p-10">
                     <form id="formCita" onsubmit="enviarCitaFiltrada(event)" class="space-y-5">
                         <div class="grid sm:grid-cols-2 gap-5">
@@ -392,7 +388,7 @@
         </div>
     </section>
 
-    <!-- PRUEBA SOCIAL Y REPUTACIÓN (91 Reseñas - 4.6 Estrellas) -->
+    <!-- PRUEBA SOCIAL Y REPUTACIÓN -->
     <section id="valoraciones" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
             <div>
@@ -473,13 +469,12 @@
                         <i class="fa-brands fa-whatsapp text-emerald-600 text-lg mt-0.5"></i>
                         <div>
                             <strong class="block text-medical-dark">WhatsApp de Gestión de Citas:</strong>
-                            <a href="https://wa.me/34608759715" target="_blank" class="text-emerald-600 font-bold hover:underline">608 75 97 15</a>
+                            <a href="https://wa.me/34679331098" target="_blank" class="text-emerald-600 font-bold hover:underline">679 33 10 98</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Mapa Integrado de Urb. Nuevo Versalles 12, Fuenlabrada -->
             <div class="h-80 sm:h-96 rounded-2xl overflow-hidden shadow-md border border-slate-200">
                 <iframe 
                     src="https://www.google.com/maps?q=Urbanizacion+Nuevo+Versalles+12+Fuenlabrada&output=embed" 
@@ -506,13 +501,13 @@
         </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP DIRECTO AL 608 75 97 15 -->
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a href="#gestion-citas" aria-label="Solicitar cita por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center space-x-2.5 transition transform hover:scale-105">
         <i class="fa-brands fa-whatsapp text-2xl"></i>
         <span class="font-heading font-bold text-sm">Pedir Cita</span>
     </a>
 
-    <!-- SCRIPTS DEL PRE-FILTRO DE CITAS -->
+    <!-- SCRIPTS DEL PRE-FILTRO DE CITAS (Envía al 679 33 10 98) -->
     <script>
         function preseleccionarEspecialidad(nombreEspecialidad) {
             const select = document.getElementById('especialidad');
@@ -538,7 +533,7 @@
                           `🕒 *Preferencia horaria:* ${franja}\n` +
                           `📝 *Motivo:* ${motivo}`;
 
-            const url = `https://wa.me/34608759715?text=${encodeURIComponent(texto)}`;
+            const url = `https://wa.me/34679331098?text=${encodeURIComponent(texto)}`;
             window.open(url, '_blank');
         }
     </script>
