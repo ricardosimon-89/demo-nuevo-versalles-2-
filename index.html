@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Médico Loranca | Especialidades Médicas en Fuenlabrada</title>
+    <meta name="description" content="Centro Médico Loranca en Urb. Nuevo Versalles 12, Fuenlabrada. Especialistas en Odontología, Fisioterapia, Podología y Psicología. Gestión rápida de citas.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        medical: {
+                            dark: '#0B192C',     // Azul marino clínico profundo (Autoridad/Premium)
+                            primary: '#0284C7',  // Azul médico corporativo
+                            teal: '#0D9488',     // Turquesa salud
+                            light: '#F0F9FF',    // Fondo clínico suave
+                            surface: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-clinical {
+            background-image: linear-gradient(to right, rgba(11, 25, 44, 0.94) 0%, rgba(11, 25, 44, 0.80) 55%, rgba(11, 25, 44, 0.45) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-premium {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-premium:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.12), 0 8px 10px -6px rgba(2, 132, 199, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-medical-surface text-slate-800 antialiased selection:bg-medical-primary selection:text-white">
+
+    <!-- Top Bar Oficial -->
+    <div class="bg-medical-dark text-slate-300 text-xs py-2.5 px-4 sm:px-6 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid fa-location-dot text-sky-400 mr-1.5"></i>Urb. Nuevo Versalles, 12 — Loranca, Fuenlabrada</span>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="hidden md:inline"><i class="fa-regular fa-clock text-sky-400 mr-1.5"></i>Atención continuada con cita previa</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-amber-400 font-semibold"><i class="fa-solid fa-star mr-1"></i>4,6 / 5 en Google (91 reseñas verificadas)</span>
+                <a href="tel:910392903" class="font-bold text-white hover:text-sky-400 transition"><i class="fa-solid fa-phone mr-1 text-sky-400"></i>910 39 29 03</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación Principal -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Identidad Corporativa -->
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-medical-primary to-medical-teal flex items-center justify-center text-white text-xl shadow-md">
+                        <i class="fa-solid fa-staff-snake"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading font-extrabold text-xl text-medical-dark tracking-tight block leading-none">CENTRO MÉDICO</span>
+                        <span class="font-heading font-bold text-sm text-medical-primary tracking-widest uppercase">LORANCA</span>
+                    </div>
+                </a>
+
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex items-center space-x-8 font-semibold text-sm text-slate-600">
+                    <a href="#especialidades" class="hover:text-medical-primary transition">Unidades Médicas</a>
+                    <a href="#gestion-citas" class="hover:text-medical-primary transition">Sistema Rápido de Citas</a>
+                    <a href="#valoraciones" class="hover:text-medical-primary transition">Pacientes</a>
+                    <a href="#ubicacion" class="hover:text-medical-primary transition">Ubicación y Contacto</a>
+                </div>
+
+                <!-- Botones de Acción Directa -->
+                <div class="flex items-center space-x-3">
+                    <a href="tel:910392903" class="hidden lg:flex items-center text-slate-700 hover:text-medical-primary font-bold text-sm px-3 py-2 rounded-lg transition">
+                        <i class="fa-solid fa-phone-volume text-medical-primary mr-2"></i> 910 39 29 03
+                    </a>
+                    <a href="#gestion-citas" class="bg-medical-primary hover:bg-sky-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm transition shadow-md shadow-sky-600/20 flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar Cita Previa</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: Enfocada en Prestigio + Organización de Agenda -->
+    <header class="hero-clinical text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="lg:w-3/5">
+                <div class="inline-flex items-center space-x-2 bg-sky-500/20 border border-sky-400/30 text-sky-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>Centro Policlínico de Referencia en Fuenlabrada</span>
+                </div>
+                
+                <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    Excelencia Médica y Atención Personalizada en <span class="text-sky-400">Loranca.</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-slate-200 mb-8 max-w-2xl leading-relaxed font-normal">
+                    Un equipo multidisciplinar en <strong>Odontología, Fisioterapia, Podología y Psicología</strong> comprometido con tu salud. Utiliza nuestro nuevo sistema digital de pre-filtro para gestionar tu cita sin esperas telefónicas.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#gestion-citas" class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-heading font-bold text-base text-center transition shadow-lg shadow-emerald-500/25 flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Gestionar Cita por WhatsApp</span>
+                    </a>
+                    <a href="tel:910392903" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/25 text-white px-8 py-4 rounded-xl font-heading font-bold text-base text-center transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Recepción: 910 39 29 03</span>
+                    </a>
+                </div>
+
+                <!-- Indicadores de Autoridad -->
+                <div class="mt-12 pt-8 border-t border-slate-700/70 grid grid-cols-3 gap-4 sm:gap-8">
+                    <div>
+                        <p class="font-heading text-2xl sm:text-3xl font-extrabold text-white">4,6 <span class="text-amber-400 text-xl">★</span></p>
+                        <p class="text-xs sm:text-sm text-slate-300">Valoración media (+90 reseñas)</p>
+                    </div>
+                    <div>
+                        <p class="font-heading text-2xl sm:text-3xl font-extrabold text-sky-400">4 Unidades</p>
+                        <p class="text-xs sm:text-sm text-slate-300">Especialidades integradas</p>
+                    </div>
+                    <div>
+                        <p class="font-heading text-2xl sm:text-3xl font-extrabold text-emerald-400">Directo</p>
+                        <p class="text-xs sm:text-sm text-slate-300">Triaje digital sin esperas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- AVISO DE GESTIÓN INTELIGENTE DE AGENDA (Guiño directo a lo que dijo en la llamada) -->
+    <section class="bg-white border-b border-slate-200 py-6 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 bg-medical-light border border-sky-100 rounded-2xl p-5">
+            <div class="flex items-start sm:items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-medical-primary text-white flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div>
+                    <h2 class="font-heading font-bold text-medical-dark text-base sm:text-lg">¿Líneas telefónicas ocupadas por alta demanda?</h2>
+                    <p class="text-slate-600 text-xs sm:text-sm">Para ofrecer una mejor organización de nuestras agendas, puedes enviarnos tu solicitud pre-filtrada por especialidad directamente a nuestro WhatsApp de Recepción.</p>
+                </div>
+            </div>
+            <a href="#gestion-citas" class="shrink-0 bg-medical-dark hover:bg-slate-800 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition">
+                Ir al Filtro de Citas <i class="fa-solid fa-arrow-down ml-1"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ESPECIALIDADES MÉDICAS (Las 4 reales del Centro Médico Loranca) -->
+    <section id="especialidades" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-medical-primary font-bold text-xs uppercase tracking-widest">Atención Multidisciplinar en Nuevo Versalles</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-medical-dark mt-2 mb-4">
+                Nuestras Unidades Especializadas
+            </h2>
+            <p class="text-slate-600 text-base sm:text-lg">
+                Selecciona el área médica en la que necesitas atención. Al pulsar en cada especialidad, nuestro asistente preparará tu solicitud directa para recepción.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-7">
+            <!-- 1. Odontología -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-premium flex flex-col justify-between">
+                <div>
+                    <div class="h-48 bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Odontología en Loranca" class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 bg-medical-dark/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-lg">
+                            Salud Bucodental
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-10 h-10 rounded-lg bg-sky-50 text-medical-primary flex items-center justify-center text-lg mb-3">
+                            <i class="fa-solid fa-tooth"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-medical-dark mb-2">Odontología</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Odontología general y conservadora, revisiones periódicas, higiene dental, implantología, ortodoncia y urgencias dentales.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="preseleccionarEspecialidad('Odontología')" class="w-full bg-slate-100 hover:bg-medical-primary hover:text-white text-medical-dark font-bold text-sm py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2">
+                        <span>Pedir Cita en Odontología</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. Fisioterapia -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-premium flex flex-col justify-between">
+                <div>
+                    <div class="h-48 bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Fisioterapia en Loranca" class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 bg-medical-teal/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-lg">
+                            Rehabilitación
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-10 h-10 rounded-lg bg-teal-50 text-medical-teal flex items-center justify-center text-lg mb-3">
+                            <i class="fa-solid fa-hands-holding-circle"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-medical-dark mb-2">Fisioterapia</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Terapia manual avanzada, rehabilitación de lesiones traumatológicas y deportivas, dolor de espalda, cervicalgias y recuperación funcional.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="preseleccionarEspecialidad('Fisioterapia')" class="w-full bg-slate-100 hover:bg-medical-primary hover:text-white text-medical-dark font-bold text-sm py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2">
+                        <span>Pedir Cita en Fisioterapia</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Podología -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-premium flex flex-col justify-between">
+                <div>
+                    <div class="h-48 bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Podología en Loranca" class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 bg-medical-primary/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-lg">
+                            Salud del Pie
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-10 h-10 rounded-lg bg-sky-50 text-medical-primary flex items-center justify-center text-lg mb-3">
+                            <i class="fa-solid fa-shoe-prints"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-medical-dark mb-2">Podología</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Quiropodia general, estudio biomecánico de la pisada, plantillas personalizadas, tratamiento de uñas encarnadas, papilomas y pie diabético.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="preseleccionarEspecialidad('Podología')" class="w-full bg-slate-100 hover:bg-medical-primary hover:text-white text-medical-dark font-bold text-sm py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2">
+                        <span>Pedir Cita en Podología</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Psicología -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-premium flex flex-col justify-between">
+                <div>
+                    <div class="h-48 bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Psicología en Loranca" class="w-full h-full object-cover">
+                        <div class="absolute top-3 left-3 bg-indigo-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-lg">
+                            Bienestar Emocional
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg mb-3">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-medical-dark mb-2">Psicología</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Atención psicológica para adultos, adolescentes y niños. Gestión de ansiedad, estrés, estado de ánimo, terapia familiar y acompañamiento.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="preseleccionarEspecialidad('Psicología')" class="w-full bg-slate-100 hover:bg-medical-primary hover:text-white text-medical-dark font-bold text-sm py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2">
+                        <span>Pedir Cita en Psicología</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SISTEMA DE TRIAJE Y FILTRO DE CITAS A WHATSAPP (La joya de la corona para su problema de saturación) -->
+    <section id="gestion-citas" class="py-20 px-4 sm:px-6 lg:px-8 bg-medical-dark text-white relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white text-slate-800 rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-12">
+                
+                <!-- Columna Informativa -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-medical-primary to-medical-dark text-white p-8 sm:p-10 flex flex-col justify-between">
+                    <div>
+                        <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Recepción Digital
+                        </span>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold mt-4 mb-3">
+                            Solicitud Rápida de Cita Previa
+                        </h3>
+                        <p class="text-sky-100 text-sm leading-relaxed mb-8">
+                            Para agilizar la atención en mostrador y asignarte el hueco más próximo en la agenda de tu especialista, completa estos datos. Se abrirá tu WhatsApp con toda la ficha lista para enviar a recepción.
+                        </p>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-center space-x-3 bg-white/10 p-3.5 rounded-xl">
+                                <i class="fa-brands fa-whatsapp text-2xl text-emerald-400"></i>
+                                <div>
+                                    <p class="text-xs text-sky-200 uppercase font-bold">WhatsApp de Citas</p>
+                                    <p class="font-bold text-base">608 75 97 15</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white/10 p-3.5 rounded-xl">
+                                <i class="fa-solid fa-phone text-xl text-sky-300"></i>
+                                <div>
+                                    <p class="text-xs text-sky-200 uppercase font-bold">Teléfono Fijo Clínica</p>
+                                    <p class="font-bold text-base">910 39 29 03</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/15 text-xs text-sky-100 flex items-center space-x-2">
+                        <i class="fa-solid fa-shield-heart text-emerald-400 text-base"></i>
+                        <span>Atención directa con el personal de recepción del Centro Médico Loranca.</span>
+                    </div>
+                </div>
+
+                <!-- Formulario Pre-Filtro (Envía el mensaje estructurado al 608759715) -->
+                <div class="lg:col-span-7 p-8 sm:p-10">
+                    <form id="formCita" onsubmit="enviarCitaFiltrada(event)" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Nombre y Apellidos del Paciente *</label>
+                                <input type="text" id="paciente" required placeholder="Ej. Laura Gómez" class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-medical-primary focus:ring-1 focus:ring-medical-primary">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Especialidad Solicitada *</label>
+                                <select id="especialidad" required class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm bg-white font-semibold text-medical-dark focus:outline-none focus:border-medical-primary focus:ring-1 focus:ring-medical-primary">
+                                    <option value="Odontología">🦷 Odontología</option>
+                                    <option value="Fisioterapia">🤲 Fisioterapia</option>
+                                    <option value="Podología">🦶 Podología</option>
+                                    <option value="Psicología">🧠 Psicología</option>
+                                    <option value="Consulta General / Otra">📋 Consulta General / Duda</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Tipo de Paciente *</label>
+                                <select id="tipoVisita" required class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-medical-primary focus:ring-1 focus:ring-medical-primary">
+                                    <option value="Paciente habitual / Seguimiento">Ya soy paciente del centro</option>
+                                    <option value="Primera visita">Es mi primera visita</option>
+                                    <option value="Cambio o confirmación de cita">Cambiar / Confirmar cita existente</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Preferencia Horaria *</label>
+                                <select id="franja" required class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-medical-primary focus:ring-1 focus:ring-medical-primary">
+                                    <option value="Mañanas">Horario de Mañanas</option>
+                                    <option value="Tardes">Horario de Tardes</option>
+                                    <option value="Indiferente (primer hueco libre)">Indiferente (Primer hueco disponible)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Breve motivo de la consulta (Opcional)</label>
+                            <textarea id="motivo" rows="2" placeholder="Ej. Limpieza dental, dolor lumbar, revisión podológica, saber disponibilidad la semana que viene..." class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-medical-primary focus:ring-1 focus:ring-medical-primary"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold py-4 px-6 rounded-xl transition shadow-lg flex items-center justify-center space-x-2 text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Enviar Solicitud Filtrada a Recepción</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRUEBA SOCIAL Y REPUTACIÓN (91 Reseñas - 4.6 Estrellas) -->
+    <section id="valoraciones" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+            <div>
+                <span class="text-medical-primary font-bold text-xs uppercase tracking-widest">Confianza Demostrada en Loranca</span>
+                <h2 class="font-heading text-3xl font-extrabold text-medical-dark mt-2">
+                    Lo que opinan nuestros pacientes
+                </h2>
+            </div>
+            <div class="mt-4 md:mt-0 flex items-center space-x-3 bg-white px-5 py-3 rounded-2xl shadow-sm border border-slate-100">
+                <div class="text-amber-400 text-lg">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="font-heading font-bold text-medical-dark text-sm">4,6 estrellas en Google Maps (91 reseñas)</span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-7 rounded-2xl border border-slate-100 shadow-sm">
+                <div class="text-amber-400 text-sm mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 text-sm italic mb-5 leading-relaxed">
+                    "Grandes profesionales en el barrio de Loranca. Llevo años acudiendo tanto a odontología como a fisioterapia y el trato humano y cercano en recepción y en consulta es inmejorable."
+                </p>
+                <p class="font-bold text-xs text-medical-dark uppercase tracking-wider">— Paciente verificado en Google</p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl border border-slate-100 shadow-sm">
+                <div class="text-amber-400 text-sm mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 text-sm italic mb-5 leading-relaxed">
+                    "Muy recomendable. Fui al servicio de podología y salí encantada con la explicación y el cuidado. Tener un centro tan completo en Nuevo Versalles es una tranquilidad para toda la familia."
+                </p>
+                <p class="font-bold text-xs text-medical-dark uppercase tracking-wider">— Paciente verificado en Google</p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl border border-slate-100 shadow-sm">
+                <div class="text-amber-400 text-sm mb-3">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 text-sm italic mb-5 leading-relaxed">
+                    "Excelente atención. Aunque suelen tener la agenda bastante llena porque trabajan muy bien, siempre intentan buscarte un hueco lo antes posible si tienes una urgencia."
+                </p>
+                <p class="font-bold text-xs text-medical-dark uppercase tracking-wider">— Paciente verificado en Google</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN E INSTALACIONES EN URB. NUEVO VERSALLES 12 -->
+    <section id="ubicacion" class="py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="text-medical-primary font-bold text-xs uppercase tracking-widest">Dónde Estamos</span>
+                <h2 class="font-heading text-3xl font-extrabold text-medical-dark mt-2 mb-4">
+                    Centro Médico Loranca
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base mb-6 leading-relaxed">
+                    Nuestras instalaciones se encuentran situadas a pie de calle en la <strong>Urbanización Nuevo Versalles, 12</strong> (Loranca, Fuenlabrada), con fácil acceso y aparcamiento en la zona.
+                </p>
+
+                <div class="space-y-4 text-sm text-slate-700 mb-8">
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot text-medical-primary text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="block text-medical-dark">Dirección:</strong>
+                            <span>Urb. Nuevo Versalles, 12, 28942 Fuenlabrada, Madrid</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-phone text-medical-primary text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="block text-medical-dark">Atención Telefónica:</strong>
+                            <a href="tel:910392903" class="text-medical-primary font-bold hover:underline">910 39 29 03</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="block text-medical-dark">WhatsApp de Gestión de Citas:</strong>
+                            <a href="https://wa.me/34608759715" target="_blank" class="text-emerald-600 font-bold hover:underline">608 75 97 15</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa Integrado de Urb. Nuevo Versalles 12, Fuenlabrada -->
+            <div class="h-80 sm:h-96 rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                <iframe 
+                    src="https://www.google.com/maps?q=Urbanizacion+Nuevo+Versalles+12+Fuenlabrada&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-medical-dark text-slate-400 py-10 px-4 border-t border-slate-800 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="font-heading font-bold text-white">CENTRO MÉDICO LORANCA</span> — Urb. Nuevo Versalles, 12 (Fuenlabrada)
+            </div>
+            <div>
+                © 2026 Centro Médico Loranca. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP DIRECTO AL 608 75 97 15 -->
+    <a href="#gestion-citas" aria-label="Solicitar cita por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center space-x-2.5 transition transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="font-heading font-bold text-sm">Pedir Cita</span>
+    </a>
+
+    <!-- SCRIPTS DEL PRE-FILTRO DE CITAS -->
+    <script>
+        function preseleccionarEspecialidad(nombreEspecialidad) {
+            const select = document.getElementById('especialidad');
+            select.value = nombreEspecialidad;
+            document.getElementById('gestion-citas').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                document.getElementById('paciente').focus();
+            }, 600);
+        }
+
+        function enviarCitaFiltrada(e) {
+            e.preventDefault();
+            const paciente = document.getElementById('paciente').value;
+            const especialidad = document.getElementById('especialidad').value;
+            const tipoVisita = document.getElementById('tipoVisita').value;
+            const franja = document.getElementById('franja').value;
+            const motivo = document.getElementById('motivo').value || 'Consulta general';
+
+            const texto = `Hola Centro Médico Loranca, solicito cita desde la web oficial:\n\n` +
+                          `👤 *Paciente:* ${paciente}\n` +
+                          `🏥 *Especialidad:* ${especialidad}\n` +
+                          `📌 *Tipo de visita:* ${tipoVisita}\n` +
+                          `🕒 *Preferencia horaria:* ${franja}\n` +
+                          `📝 *Motivo:* ${motivo}`;
+
+            const url = `https://wa.me/34608759715?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
